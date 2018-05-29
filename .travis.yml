@@ -59,7 +59,6 @@ jobs:
 
     - stage: Tests # Run regular React unit tests Registration
       script: cd applications/registration-react && npm install npm -g npm@'>=5.4.2' && npm install && jest --config=jest.config.json --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
-      after_success: npm run coverage
       env:
       - comment=Run regular React unit tests Registration + generate test coverage report
 
