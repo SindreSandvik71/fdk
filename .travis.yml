@@ -53,12 +53,12 @@ jobs:
         - comment=Run regular unit tests
 
     - stage: Tests # Run regular React unit tests
-      script: cd applications/search && npm install npm -g npm@'>=5.4.2' && npm install && jest --config=jest.config.json --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+      script: cd applications/search && npm install npm -g npm@'>=5.4.2' && npm install && npm test
       env:
       - comment=Run regular React unit tests + generate test coverage report
 
     - stage: Tests # Run regular React unit tests Registration
-      script: cd applications/registration-react && npm install npm -g npm@'>=5.4.2' && npm install && jest --config=jest.config.json --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+      script: cd applications/registration-react && npm install npm -g npm@'>=5.4.2' && npm install && npm test
       env:
       - comment=Run regular React unit tests Registration + generate test coverage report
 
