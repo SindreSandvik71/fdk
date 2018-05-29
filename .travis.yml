@@ -53,7 +53,7 @@ jobs:
         - comment=Run regular unit tests
 
     - stage: Tests # Run regular React unit tests
-      script: cd applications/search && npm install npm -g npm@'>=5.4.2' && npm install && npm test
+      script: cd applications && npm --prefix search install npm -g npm@'>=5.4.2' && npm --prefix search install && npm --prefix search test
       after_success: npm run coverage
       env:
       - comment=Run regular React unit tests + generate test coverage report
