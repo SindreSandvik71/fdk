@@ -1,5 +1,5 @@
 {
-  "testMatch": ["<rootDir>/../search/test/**/(test).js?(x)", "**/?(*.)(test).js?(x)"],
+  "testMatch": ["<rootDir>/test/**/(test).js?(x)", "**/?(*.)(test).js?(x)"],
   "testPathIgnorePatterns": ["/node_modules/", "<rootDir>/test/jestsetup.js", "<rootDir>/test/fixtures/", "/target/"],
   "setupFiles": [
     "raf/polyfill",
@@ -13,11 +13,5 @@
   },
   "collectCoverage": true,
   "collectCoverageFrom": ["src/components/**/*.{js,jsx}", "src/containers/**/*.{js,jsx}"],
-  "coverageDirectory": "coverage",
-  "projects": [
-    {
-      "displayName": "search",
-      "testMatch": ["<rootDir>"]
-    }
-  ]
+  "coverageDirectory": "coverage"
 }
