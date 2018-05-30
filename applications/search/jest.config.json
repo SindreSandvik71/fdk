@@ -14,5 +14,10 @@
   "collectCoverage": true,
   "collectCoverageFrom": ["src/components/**/*.{js,jsx}", "src/containers/**/*.{js,jsx}"],
   "coverageDirectory": "coverage",
-  "projects": ["<rootDir>"]
+  "projects": [
+    {
+      "displayName": "search",
+      "testMatch": ["<rootDir>"]
+    }
+  ]
 }
