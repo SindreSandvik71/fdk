@@ -91,8 +91,11 @@ exports[`should render Header correctly 1`] = `
           </div>
           <div>
             <Dropdown
+              active={false}
+              addonType={false}
               className="btn-group-default"
-              dropup={false}
+              direction="down"
+              inNavbar={false}
               isOpen={false}
               nav={false}
               toggle={[Function]}

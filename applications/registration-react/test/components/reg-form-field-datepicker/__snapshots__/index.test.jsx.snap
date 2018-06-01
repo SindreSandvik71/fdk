@@ -33,6 +33,7 @@ exports[`should render DatepickerField correctly 1`] = `
       shouldCloseOnSelect={true}
       showTimeSelect={false}
       showYearDropdown={true}
+      timeCaption="Time"
       timeIntervals={30}
       withPortal={false}
       yearDropdownItemNumber={5}
