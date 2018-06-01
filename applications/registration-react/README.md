@@ -1,0 +1,1 @@
+# Registration application for DCAT-AP-NO 1.1
