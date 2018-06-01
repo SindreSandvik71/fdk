@@ -55,7 +55,7 @@ jobs:
     - stage: Tests # Run regular React unit tests Registration
       script: cd applications/registration-react && npm install npm -g npm@'>=5.4.2' && npm install
       env:
-      - comment=Run regular React unit tests + generate test coverage report
+      - comment=Run regular React unit tests Registration + generate test coverage report
 
     - stage: Tests # Run regular React unit tests
       script: cd applications/search && npm install npm -g npm@'>=5.4.2' && npm install && npm test
