@@ -9,8 +9,8 @@
     "dev": "webpack-dev-server --config webpack.dev.config.js",
     "build": "webpack --config webpack.prod.config.js -p",
     "lint": "eslint ./ --ext=.js,.jsx --fix",
-    "test_jest": "jest --config=jest.config.json",
-    "test": "jest --config=jest.config.json --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "test": "jest --config=jest.config.json",
+    "test_jest": "jest --config=jest.config.json --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "lint-staged": {
