@@ -53,7 +53,7 @@ jobs:
         - comment=Run regular unit tests
 
     - stage: Tests # Run regular React unit tests Registration
-      script: cd applications/registration-react && npm install yarn && yarn install
+      script: cd applications/registration-react && npm install yarn
       env:
       - comment=Run regular React unit tests Registration + generate test coverage report
 
