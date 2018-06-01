@@ -3,8 +3,8 @@ FROM node:8-alpine
 # to run localhost docker
 
 RUN npm init -y
-RUN npm install ejs express method-override body-parser compression --loglevel error
-RUN npm install pm2 -g --loglevel error
+RUN yarn add ejs express method-override body-parser compression --loglevel error
+RUN yarn global add pm2 --loglevel error
 
 # Create app directory
 RUN mkdir -p /usr/src/app && chmod 777 /usr/src/app
@@ -14,12 +14,12 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install app dependencies
-RUN npm install --loglevel=warn
+RUN yarn install --loglevel=warn
 COPY . /usr/src/app/
 
-RUN npm run build
+RUN yarn run build
 
-#RUN npm test
+#RUN yarn test
 
 #ENV NODE_ENV production
 
