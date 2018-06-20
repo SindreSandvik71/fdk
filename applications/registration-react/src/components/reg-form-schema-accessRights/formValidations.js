@@ -34,7 +34,8 @@ const validate = values => {
       itemErrors = validateMinTwoChars(
         'prefLabel',
         legalBasisForRestrictionPrefLabel,
-        itemErrors
+        itemErrors,
+        localization.getLanguage()
       );
       itemErrors = validateURL('uri', legalBasisForRestrictionURI, itemErrors);
 
@@ -54,7 +55,9 @@ const validate = values => {
     legalBasisForProcessingNodes = legalBasisForProcessing.map(item => {
       let itemErrors = {};
       const legalBasisForProcessingPrefLabel =
-        item.prefLabel && item.prefLabel.nb ? item.prefLabel.nb : null;
+        item.prefLabel && item.prefLabel[localization.getLanguage()]
+          ? item.prefLabel[localization.getLanguage()]
+          : null;
       const legalBasisForProcessingURI = item.uri ? item.uri : null;
 
       itemErrors = validateMinTwoChars(
@@ -80,7 +83,9 @@ const validate = values => {
     legalBasisForAccessNodes = legalBasisForAccess.map(item => {
       let itemErrors = {};
       const legalBasisForAccessPrefLabel =
-        item.prefLabel && item.prefLabel.nb ? item.prefLabel.nb : null;
+        item.prefLabel && item.prefLabel[localization.getLanguage()]
+          ? item.prefLabel[localization.getLanguage()]
+          : null;
       const legalBasisForAccessURI = item.uri ? item.uri : null;
 
       itemErrors = validateMinTwoChars(
