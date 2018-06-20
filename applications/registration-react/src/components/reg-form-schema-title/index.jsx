@@ -22,21 +22,17 @@ const FormTitle = reduxForm({
 const mapStateToProps = ({ dataset }) => ({
   initialValues: {
     title:
-      dataset.result.title &&
-      dataset.result.title.nb &&
-      dataset.result.title.nb.length > 0
+      dataset.result.title && Object.keys(dataset.result.title).length > 0
         ? dataset.result.title
         : textType,
     description:
       dataset.result.description &&
-      dataset.result.description.nb &&
-      dataset.result.description.nb.length > 0
+      Object.keys(dataset.result.description).length > 0
         ? dataset.result.description
         : textType,
     objective:
       dataset.result.objective &&
-      dataset.result.objective.nb &&
-      dataset.result.objective.nb.length > 0
+      Object.keys(dataset.result.objective).length > 0
         ? dataset.result.objective
         : textType,
     landingPage: dataset.result.landingPage || emptyArray
