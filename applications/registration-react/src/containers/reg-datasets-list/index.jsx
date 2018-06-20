@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import localization from '../../utils/localization';
 import {
   fetchHelptextsIfNeeded,
   fetchCatalogIfNeeded,
@@ -39,7 +40,10 @@ export class RegDatasetsList extends React.Component {
             !isFetchingCatalog &&
             catalogItem && (
               <div className="col-12 fdk-reg-datasets-list">
-                <FormCatalog helptextItems={helptextItems} />
+                <FormCatalog
+                  helptextItems={helptextItems}
+                  selectedLanguage={localization.getLanguage()}
+                />
                 <DatasetItemsList
                   catalogId={catalogItem.id}
                   datasetItems={datasetItems}
