@@ -21,7 +21,7 @@ export const validateMinTwoChars = (
   nameOfObject,
   value,
   errors,
-  nameOfObjectField = 'nb',
+  nameOfObjectField = localization.getLanguage(),
   useLangField = true
 ) => {
   if (value && value.length < 2) {
@@ -67,7 +67,7 @@ export const validateLinkReturnAsSkosType = (
   nameOfObject,
   value,
   errors,
-  nameOfObjectField = 'nb',
+  nameOfObjectField = localization.getLanguage(),
   useLangField = true
 ) => {
   if (value && !isURL(value)) {
