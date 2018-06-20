@@ -3,6 +3,7 @@ import {
   validateMinTwoChars,
   validateURL
 } from '../../validation/validation';
+import localization from '../../utils/localization';
 
 const validate = values => {
   let errors = {};
@@ -25,7 +26,9 @@ const validate = values => {
     legalBasisForRestrictionNodes = legalBasisForRestriction.map(item => {
       let itemErrors = {};
       const legalBasisForRestrictionPrefLabel =
-        item.prefLabel && item.prefLabel.nb ? item.prefLabel.nb : null;
+        item.prefLabel && item.prefLabel[localization.getLanguage()]
+          ? item.prefLabel[localization.getLanguage()]
+          : null;
       const legalBasisForRestrictionURI = item.uri ? item.uri : null;
 
       itemErrors = validateMinTwoChars(
