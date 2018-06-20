@@ -1,21 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Dropdown, DropdownToggle, DropdownMenu } from 'reactstrap';
+import {
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from 'reactstrap';
 
 import { fetchUserIfNeeded } from '../../actions/index';
 import localization from '../../utils/localization';
 import '../../assets/style/main.scss';
 import './index.scss';
+import { getLanguageFromUrl } from '../../utils/translateText';
+import { onChangeLanguage } from '../../utils/changeLanguage';
 
 export class Header extends React.Component {
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
+    this.toggleLanguage = this.toggleLanguage.bind(this);
     this.state = {
-      dropdownOpen: false
+      dropdownOpen: false,
+      dropdownLanguageOpen: false
     };
     this.props.dispatch(fetchUserIfNeeded());
+  }
+
+  componentWillMount() {
+    const langCode = getLanguageFromUrl();
+    if (langCode !== null) {
+      localization.setLanguage(langCode);
+    }
+  }
+
+  toggleLanguage() {
+    this.setState({
+      dropdownLanguageOpen: !this.state.dropdownLanguageOpen
+    });
   }
 
   toggle() {
@@ -95,6 +117,35 @@ export class Header extends React.Component {
                     </a>
                   </div>
                 )}
+
+                <div>
+                  <Dropdown
+                    className="btn-group-default btn-group"
+                    isOpen={this.state.dropdownLanguageOpen}
+                    toggle={this.toggleLanguage}
+                  >
+                    <DropdownToggle
+                      className="fdk-button fdk-button-language fdk-button-default dropdown-toggle btn-default"
+                      caret
+                    >
+                      <span>{localization.lang.chosenLanguage}</span>
+                    </DropdownToggle>
+                    <DropdownMenu>
+                      <DropdownItem
+                        className="dropdown-item"
+                        onClick={() => onChangeLanguage('nb')}
+                      >
+                        {localization.lang['norwegian-nb']}
+                      </DropdownItem>
+                      <DropdownItem
+                        className="dropdown-item"
+                        onClick={() => onChangeLanguage('en')}
+                      >
+                        {localization.lang['english-en']}
+                      </DropdownItem>
+                    </DropdownMenu>
+                  </Dropdown>
+                </div>
 
                 <div>
                   <Dropdown

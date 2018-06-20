@@ -91,6 +91,47 @@ exports[`should render Header correctly 1`] = `
           </div>
           <div>
             <Dropdown
+              className="btn-group-default btn-group"
+              dropup={false}
+              isOpen={false}
+              nav={false}
+              toggle={[Function]}
+            >
+              <DropdownToggle
+                aria-haspopup={true}
+                caret={true}
+                className="fdk-button fdk-button-language fdk-button-default dropdown-toggle btn-default"
+                color="secondary"
+              >
+                <span>
+                  Language
+                </span>
+              </DropdownToggle>
+              <DropdownMenu
+                flip={true}
+                tag="div"
+              >
+                <DropdownItem
+                  className="dropdown-item"
+                  onClick={[Function]}
+                  tag="button"
+                  toggle={true}
+                >
+                  Norsk (bokmål)
+                </DropdownItem>
+                <DropdownItem
+                  className="dropdown-item"
+                  onClick={[Function]}
+                  tag="button"
+                  toggle={true}
+                >
+                  Engelsk
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+          </div>
+          <div>
+            <Dropdown
               className="btn-group-default"
               dropup={false}
               isOpen={false}

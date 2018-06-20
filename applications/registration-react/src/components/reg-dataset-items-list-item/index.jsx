@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
 import localization from '../../utils/localization';
+import { getLanguageFromUrl } from '../../utils/translateText';
 import './index.scss';
 
 const DatasetItemsListItem = props => {
   const { catalogId, item } = props;
+  const langCode = getLanguageFromUrl();
+  const langParam = langCode ? `?lang=${langCode}` : '';
   const itemClass = cx('w-75', 'fdk-text-size-small', {
     'fdk-color2': item.title && !item.title.nb
   });
@@ -16,7 +19,7 @@ const DatasetItemsListItem = props => {
       {item && (
         <Link
           className="w-100"
-          to={`/catalogs/${catalogId}/datasets/${item.id}`}
+          to={`/catalogs/${catalogId}/datasets/${item.id}${langParam}`}
         >
           <div className="d-flex justify-content-between">
             <span className={itemClass}>

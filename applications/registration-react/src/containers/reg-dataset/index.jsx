@@ -45,6 +45,7 @@ import {
   distributionValues,
   sampleValues
 } from './logic';
+import { getLanguageFromUrl } from '../../utils/translateText';
 import './index.scss';
 
 export class RegDataset extends React.Component {
@@ -111,6 +112,8 @@ export class RegDataset extends React.Component {
       0,
       catalogDatasetsURL.lastIndexOf('/')
     );
+    const langCode = getLanguageFromUrl();
+    const langParam = langCode ? `?lang=${langCode}` : '';
     return (
       <div className="container">
         <div className="row mb-2 mb-md-5">
@@ -118,7 +121,7 @@ export class RegDataset extends React.Component {
             <i className="fa fa-arrow-left mr-2" />
             <Link
               className="fdk-text-size-small fdk-color1 font-weight-light"
-              to={catalogURL}
+              to={`${catalogURL}${langParam}`}
             >
               {localization.datasets.backToCatalog}
             </Link>
@@ -136,7 +139,10 @@ export class RegDataset extends React.Component {
                   values={titleValues(title.values)}
                   syncErrors={title.syncErrors}
                 >
-                  <FormTitle helptextItems={helptextItems} />
+                  <FormTitle
+                    helptextItems={helptextItems}
+                    selectedLanguage={localization.getLanguage()}
+                  />
                 </FormTemplate>
 
                 <FormTemplate
@@ -145,7 +151,10 @@ export class RegDataset extends React.Component {
                   values={accessRightsValues(accessRights.values)}
                   syncErrors={accessRights.syncErrors}
                 >
-                  <FormAccessRights helptextItems={helptextItems} />
+                  <FormAccessRights
+                    helptextItems={helptextItems}
+                    selectedLanguage={localization.getLanguage()}
+                  />
                 </FormTemplate>
 
                 <FormTemplate
@@ -154,7 +163,10 @@ export class RegDataset extends React.Component {
                   values={themesValues(formThemes.values)}
                   syncErrors={formThemes.syncErrors}
                 >
-                  <FormTheme helptextItems={helptextItems} />
+                  <FormTheme
+                    helptextItems={helptextItems}
+                    selectedLanguage={localization.getLanguage()}
+                  />
                 </FormTemplate>
 
                 <FormTemplate
@@ -162,7 +174,10 @@ export class RegDataset extends React.Component {
                   values={typeValues(type.values)}
                   syncErrors={type.syncErrors}
                 >
-                  <FormType helptextItems={helptextItems} />
+                  <FormType
+                    helptextItems={helptextItems}
+                    selectedLanguage={localization.getLanguage()}
+                  />
                 </FormTemplate>
 
                 <FormTemplate
@@ -170,7 +185,10 @@ export class RegDataset extends React.Component {
                   values={conceptValues(concept.values)}
                   syncErrors={concept.syncErrors}
                 >
-                  <FormConcept helptextItems={helptextItems} />
+                  <FormConcept
+                    helptextItems={helptextItems}
+                    selectedLanguage={localization.getLanguage()}
+                  />
                 </FormTemplate>
 
                 <FormTemplate
@@ -178,7 +196,10 @@ export class RegDataset extends React.Component {
                   values={spatialValues(spatial.values)}
                   syncErrors={spatial.syncErrors}
                 >
-                  <FormSpatial helptextItems={helptextItems} />
+                  <FormSpatial
+                    helptextItems={helptextItems}
+                    selectedLanguage={localization.getLanguage()}
+                  />
                 </FormTemplate>
 
                 <FormTemplate
@@ -186,7 +207,10 @@ export class RegDataset extends React.Component {
                   values={provenanceValues(formProvenance.values)}
                   syncErrors={formProvenance.syncErrors}
                 >
-                  <FormProvenance helptextItems={helptextItems} />
+                  <FormProvenance
+                    helptextItems={helptextItems}
+                    selectedLanguage={localization.getLanguage()}
+                  />
                 </FormTemplate>
 
                 <FormTemplate
@@ -194,7 +218,10 @@ export class RegDataset extends React.Component {
                   values={contentsValues(contents.values)}
                   syncErrors={contents.syncErrors}
                 >
-                  <FormContents helptextItems={helptextItems} />
+                  <FormContents
+                    helptextItems={helptextItems}
+                    selectedLanguage={localization.getLanguage()}
+                  />
                 </FormTemplate>
 
                 <FormTemplate
@@ -202,7 +229,10 @@ export class RegDataset extends React.Component {
                   values={informationModelValues(informationModel.values)}
                   syncErrors={informationModel.syncErrors}
                 >
-                  <FormInformationModel helptextItems={helptextItems} />
+                  <FormInformationModel
+                    helptextItems={helptextItems}
+                    selectedLanguage={localization.getLanguage()}
+                  />
                 </FormTemplate>
 
                 <FormTemplate
@@ -217,7 +247,10 @@ export class RegDataset extends React.Component {
                   values={contactPointValues(contactPoint.values)}
                   syncErrors={contactPoint.syncErrors}
                 >
-                  <FormContactPoint helptextItems={helptextItems} />
+                  <FormContactPoint
+                    helptextItems={helptextItems}
+                    selectedLanguage={localization.getLanguage()}
+                  />
                 </FormTemplate>
 
                 <FormTemplate
@@ -233,7 +266,10 @@ export class RegDataset extends React.Component {
                       : null
                   }
                 >
-                  <FormDistribution helptextItems={helptextItems} />
+                  <FormDistribution
+                    helptextItems={helptextItems}
+                    selectedLanguage={localization.getLanguage()}
+                  />
                 </FormTemplate>
 
                 <FormTemplate
@@ -248,7 +284,10 @@ export class RegDataset extends React.Component {
                       : null
                   }
                 >
-                  <FormSample helptextItems={helptextItems} />
+                  <FormSample
+                    helptextItems={helptextItems}
+                    selectedLanguage={localization.getLanguage()}
+                  />
                 </FormTemplate>
 
                 <DatasetPublish

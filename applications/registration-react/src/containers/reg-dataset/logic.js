@@ -1,7 +1,7 @@
 import moment from 'moment';
 
 import localization from '../../utils/localization';
-import getTranslateText from '../../utils/translateText';
+import { getTranslateText } from '../../utils/translateText';
 
 export const titleValues = values => {
   if (values) {

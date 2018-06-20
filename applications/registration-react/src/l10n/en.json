@@ -1,0 +1,324 @@
+{
+  "app": {
+    "skipLink": "Hopp til hovedinnhold",
+    "navigateFrontpage": "Gå til forside",
+    "title": "Registration",
+    "publisher": "Virksomhet",
+    "menu": "Meny",
+    "readMore": "Les mer om ",
+    "lastSaved": "Sist lagret",
+    "logIn": "Logg inn",
+    "logOut": "Logg ut",
+    "autoSave": "Alle endringer lagres automatisk",
+    "notPublished": "Ikke klar for å publisere ennå?",
+    "notPublishedText": "Vi har lagret alt arbeidet ditt som et utkast, kom tilbake når du er klar for å publisere!",
+    "published": "Publisert!",
+    "publishedText": "Datasettbeskrivelsen er nå publisert, og vil være søkbar i Felles datakatalog i løpet av 24 timer.",
+    "cancel": "Avbryt",
+    "import": "Importer",
+    "editTitle": "Rediger tittel"
+  },
+  "beta": {
+    "header": "Dette er en beta-versjon. ",
+    "first": "Gi oss gjerne ",
+    "second": "tilbakemeldinger",
+    "last": "om hva du synes!"
+  },
+  "lang": {
+    "choose": "Velg språk",
+    "chosenLanguage": "Language",
+    "norwegian-nb": "Norsk (bokmål)",
+    "norwegian-nn": "Norsk (nynorsk)",
+    "english-en": "Engelsk",
+    "ENG": "Engelsk",
+    "NOR": "Norsk",
+    "SMI": "Samisk"
+  },
+  "menu": {
+    "title": "Meny",
+    "guide": "Veileder",
+    "standard": "Standard",
+    "fdk": "Felles datakatalog"
+  },
+  "footer": {
+    "organisation.number": "Organisasjonsnummer:",
+    "information": "Informasjonskapsler",
+    "information_text": "Dette er et samarbeidsprosjekt mellom Brønnøysundregistrene, Difi og øvrige SKATE-etater.",
+    "mail": "fellesdatakatalog@brreg.no",
+    "privacy": " og personvern",
+    "contact": "Kontakt:"
+  },
+  "validation": {
+    "required": "Obligatorisk felt, må fylles ut.",
+    "minTwoChars": "Feltet må ha minimum to tegn.",
+    "validateDataset": "Datasettet inneholder feil!",
+    "validateDatasetBody": "Datasettet kunne ikke publiseres. Se over felt som er markert med feil og rett disse før du forsøker å publisere på nytt.",
+    "validateLink": "Feltet er ikke en gyldig URL",
+    "validateEmail": "Ikke gyldig e-post",
+    "validatePhone": "Ikke gyldig telefonnummer"
+  },
+  "deleteDataset": {
+    "title": "Vil du virkerlig slette datasettet?",
+    "body": "Alle registrerte data slettes og kan ikke hentes tilbake. Bekreft eller avkreft sletting."
+  },
+  "helptext": {
+    "required": "Required",
+    "more": "Flere anbefalinger"
+  },
+  "schema": {
+    "common": {
+      "startDateLabel": "Fra",
+      "endDateLabel": "Til",
+      "addTime": "Legg til tidsperiode",
+      "titleLabel": "Tittel",
+      "descriptionLabel": "Beskrivelse",
+      "linkLabel": "Lenke",
+      "add": "Legg til"
+    },
+    "catalog": {
+      "helptext": {
+        "title": "Beskrivelse"
+      },
+      "ownedByLabel": "Eies av",
+      "editDescriptionLabel": "Rediger beskrivelse"
+    },
+    "title": {
+      "helptext": {
+        "title": "Title",
+        "description": "Beskrivelse av datasettet",
+        "objective": "Formålet med datasettet",
+        "landingPage": "Lenke til mer informasjon om datasettet"
+      },
+      "titleLabel": "Tittel",
+      "descriptionLabel": "Beskrivelse",
+      "objectiveLabel": "Formål"
+    },
+    "accessRights": {
+      "heading": "Tilgangsnivå",
+      "publicLabel": "Offentlig",
+      "restrictedLabel": "Begrenset offentlighet",
+      "nonPublicLabel": "Unntatt offentlighet",
+      "legalBasisForRestriction": {
+        "heading": "Skjermingshjemmel",
+        "titleLabel": "Tittel",
+        "linkLabel": "Lenke"
+      },
+      "legalBasisForProcessing": {
+        "heading": "Behandlingsgrunnlag",
+        "titleLabel": "Tittel",
+        "linkLabel": "Lenke"
+      },
+      "legalBasisForAccess": {
+        "heading": "Utleveringshjemmel",
+        "titleLabel": "Tittel",
+        "linkLabel": "Lenke"
+      }
+    },
+    "theme": {
+      "helptext": {
+        "theme": "Tema"
+      }
+    },
+    "type": {
+      "helptext": {
+        "type": "Type"
+      }
+    },
+    "concept": {
+      "helptext": {
+        "content": "Begrep",
+        "keyword": "Søkeord"
+      },
+      "conceptLabel": "Begrep",
+      "keywordLabel": "Søkeord"
+    },
+    "spatial": {
+      "helptext": {
+        "spatial": "Geografisk avgrensning",
+        "temporal": "Tidsmessig avgrenset til",
+        "issued": "Utgivelsesdato",
+        "language": "Språk"
+      },
+      "spatialLabel": "Geografisk avgrensning",
+      "issuedLabel": "Utgivelsesdato"
+    },
+    "provenance": {
+      "helptext": {
+        "provenance": "Opphav",
+        "accruralPeriodicity": "Oppdateringsfrekvens",
+        "modified": "Sist oppdatert",
+        "currentness": "Aktualitet"
+      },
+      "modifiedLabel": "Sist oppdatert",
+      "hasCurrentnessAnnotationLabel": "Aktualitet",
+      "accrualPeriodicity": {
+        "ANNUAL": "årlig",
+        "ANNUAL2": "halvårlig",
+        "ANNUAL_3": "tre ganger per år",
+        "BIENNIAL": "annethvert år",
+        "BIMONTHLY": "annenhver måned",
+        "BIWEEKLY": "hver fjortende dag",
+        "CONT": "kontinuerlig",
+        "DAILY": "daglig",
+        "DAILY_2": "to ganger per dag",
+        "IRREG": "uregelmessig",
+        "MONTHLY": "månedlig",
+        "MONTHLY_2": "to ganger i måneden",
+        "MONTHLY_3": "tre ganger i måneden",
+        "NEVER": "aldri",
+        "OTHER": "annet",
+        "QUARTERLY": "kvartalsvis",
+        "TRIENNIAL": "hvert tredje år",
+        "UNKNOWN": "ukjent",
+        "UPDATE_CONT": "kontinuerlig oppdatert",
+        "WEEKLY": "ukentlig",
+        "WEEKLY_2": "to ganger i uken",
+        "WEEKLY_3": "tre ganger i uken"
+      }
+    },
+    "informationModel": {
+      "helptext": {
+        "informationModel": "Informasjonsmodell"
+      },
+      "titleLabel": "Tittel",
+      "linkLabel": "Lenke"
+    },
+    "reference": {
+      "helptext": {
+        "reference": "Relasjoner"
+      },
+      "addReferenceLabel": "Legg til relaterte datasett"
+    },
+    "conformsTo": {
+      "titleLabel": "Tittel",
+      "linkLabel": "Lenke"
+    },
+    "content": {
+      "helptext": {
+        "conformsTo": "Standard",
+        "relevance": "Relevans",
+        "completeness": "Kompletthet",
+        "accuracy": "Nøyaktighet",
+        "availability": "Tilgjengelighet"
+      },
+      "hasRelevanceAnnotationLabel": "Relevans",
+      "hasCompletenessAnnotationLabel": "Kompletthet",
+      "hasAccuracyAnnotationLabel": "Nøyaktighet",
+      "hasAvailabilityAnnotationLabel": "Tilgjengelighet"
+    },
+    "contactPoint": {
+      "helptext": {
+        "organizationalUnit": "Kontaktpunkt",
+        "hasURL": "Kontaktskjema",
+        "hasEmail": "E-post",
+        "hasTelephone": "Telefon"
+      },
+      "organizationUnitLabel": "Kontaktpunkt",
+      "hasURLLabel": "Kontaktskjema",
+      "emailLabel": "E-post",
+      "hasTelephoneLabel": "Telefon"
+    },
+    "distribution": {
+      "helptext": {
+        "type": "Type",
+        "accessURL": "Tilgangslenke",
+        "format": "Format",
+        "license": "Lisens",
+        "description": "Beskrivelse",
+        "documentation": "Lenke til dokumentasjon av distribusjonen",
+        "conformsTo": "Standard"
+      },
+      "landingPageLabel": "Landingsside",
+      "deleteDistributionLabel": "Slett distribusjon",
+      "addDistributionLabel": "Legg til distribusjon",
+      "apiLabel": "API",
+      "feedLabel": "Feed",
+      "downloadLabel": "Nedlastbar fil",
+      "accessURLLabel": "Tilgangslenke",
+      "formatLabel": "Format",
+      "descriptionLabel": "Beskrivelse"
+    },
+    "sample": {
+      "helptext": {
+        "accessURL": "Tilgangslenke",
+        "format": "Format",
+        "description": "Beskrivelse"
+      },
+      "deleteSampleLabel": "Slett eksempeldata",
+      "addSampleLabel": "Legg til eksempeldata",
+      "accessURLLabel": "Tilgangslenke",
+      "formatLabel": "Format",
+      "descriptionLabel": "Beskrivelse"
+    }
+  },
+  "inactiveSessionWarning": {
+    "title": "Sesjonen blir snart avbrutt",
+    "loggingOut": "Du vil bli logget ut om ",
+    "stayLoggedIn": "Ønsker du å forbli innlogget?",
+    "buttonStayLoggedIn": "Ja, forbli innlogget",
+    "buttonLogOut": "Nei, logg ut"
+  },
+  "datasets": {
+    "backToCatalog": "Tilbake til katalogen",
+    "list": {
+      "btnNewDataset": "Legg til ny datasettbeskrivelse",
+      "btnImportDataset": "Importer datasett",
+      "header": {
+        "title": "Tittel på datasett",
+        "status": "Status"
+      },
+      "missingItems": "Ingen datasettbeskrivelse registrert",
+      "missingTitle": "Mangler tittel",
+      "statusPublished": "Publisert",
+      "statusDraft": "Utkast"
+    },
+    "import": {
+      "notEmpty": "URL kan ikke være tom",
+      "title": "Importer datasett fra DCAT RDF ressurs.",
+      "body": "DCAT-modellen som blir importert må inneholde en katalog som har samme organisasjonsnr som katalogen du redigerer. Kun datasett som er med i denne katalogen vil bli importert.",
+      "setURL": "Angi url til DCAT ressurs:"
+    },
+    "formTemplates": {
+      "title": "Title and description",
+      "accessRight": "Tilgangsnivå",
+      "theme": "Tema",
+      "type": "Type",
+      "concept": "Begrep og søkeord",
+      "spatial": "Geografi, tid og språk",
+      "provenance": "Opphav og ferskhet",
+      "content": "Innhold",
+      "informationModel": "Informasjonsmodell",
+      "reference": "Relasjoner",
+      "contactInformation": "Kontaktinformasjon",
+      "distribution": "Distribusjoner",
+      "sample": "Eksempeldata"
+    },
+    "formValues": {
+      "accessRights": {
+        "restricted": "Begrenset",
+        "publicString": "Offentlig",
+        "nonPublic": "Unntatt offentlighet"
+      },
+      "references": "relasjoner",
+      "distributions": "distribusjoner",
+      "sample": "eksempeldata"
+    }
+  },
+  "catalogs": {
+    "title": "Your catalogs",
+    "missingCatalogs": {
+      "title": "Hei",
+      "ingress": "Det ser ikke ut til at du har fått tilgang til noen kataloger.",
+      "accessTitle": "Trenger du tilgang?",
+      "accessText": "Kontakt din leder for å få tilgang til å registrere datasett.",
+      "assignAccessTitle": "Skal du gi andre tilgang?",
+      "assignAccessText": "Du kan gi andre tilgang til å redigere datasett for din virksomhet via Altinn. Les mer om hvordan du gir andre tilgang."
+    }
+  },
+  "loginDialog": {
+    "title": "Velkommen til registrering i felles datakatalog",
+    "ingress": "Her kan du registrere og administrere datasettbeskrivelser for din virksomhet. For å få tilgang må du være innlogget.",
+    "loggedOutMsgPart1": "Du har blitt logget ut. ",
+    "loggedOutMsgPart2": "Sesjonen ble tidsavbrutt, men vi har tatt vare på alle endringene du har gjort. Logg inn på nytt for å fortsette å jobbe med registreringen."
+  }
+}

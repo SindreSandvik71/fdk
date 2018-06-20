@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch, Router } from 'react-router-dom';
 
+import history from './utils/history';
 import configureStore from './store/configureStore';
 import ProtectedRoute from './containers/app-protected-route';
 import RegCatalogs from './containers/reg-catalogs';
@@ -38,13 +39,13 @@ const routes = (
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <Router history={history}>
       <div className="d-flex flex-column site">
         <Header />
         <div className="site-content d-flex flex-column">{routes}</div>
         <Footer />
       </div>
-    </BrowserRouter>
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
