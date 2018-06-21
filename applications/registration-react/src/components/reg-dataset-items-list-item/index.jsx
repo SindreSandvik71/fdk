@@ -12,7 +12,7 @@ const DatasetItemsListItem = props => {
   const langCode = getLanguageFromUrl();
   const langParam = langCode ? `?lang=${langCode}` : '';
   const itemClass = cx('w-75', 'fdk-text-size-small', {
-    'fdk-color2': item.title && !item.title.nb
+    'fdk-color2': item.title && !item.title[localization.getLanguage()]
   });
   return (
     <div className="fdk-datasets-list-item d-flex">
@@ -23,8 +23,8 @@ const DatasetItemsListItem = props => {
         >
           <div className="d-flex justify-content-between">
             <span className={itemClass}>
-              {item.title.nb
-                ? item.title.nb
+              {item.title[localization.getLanguage()]
+                ? item.title[localization.getLanguage()]
                 : localization.datasets.list.missingTitle}
             </span>
             <span className="d-flex w-25">
