@@ -174,7 +174,7 @@ public class ApiHarvester {
                 Reader input =
                         new BufferedReader(new InputStreamReader(canonicalNamesFile.getInputStream()))
         ) {
-            records = CSVFormat.EXCEL.withHeader().withRecordSeparator(';').parse(input);
+            records = CSVFormat.EXCEL.withHeader().withDelimiter(';').parse(input);
 
             for (CSVRecord line : records) {
                 ApiCatalogRecord catalogRecord = new ApiCatalogRecord();
