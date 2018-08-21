@@ -160,13 +160,7 @@ public class ApiHarvester {
             } catch (Exception e) {
                 logger.error("Unable get resource url", e.getMessage(), e);
             }
-            //            not in use right now
-//            catalogRecord.setOrgName();
-
-
-//            metaRecord={url=classPathResource.getURL()}
-//            result.add(harvestApi(metarecord classPathResource.getURL().toString()));
-//
+            result.add(catalogRecord);
         }
 
         Iterable<CSVRecord> records;
