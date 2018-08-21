@@ -15,6 +15,7 @@ exports[`should render ApiDetailsPage correctly with apiItem 1`] = `
         <ApiHeader
           harvest={null}
           publisher={null}
+          publisherItems={null}
           title="National Data Directory Search API"
         />
       </div>
@@ -271,6 +272,7 @@ exports[`should render ApiDetailsPage correctly with missing api-properties 1`] 
         <ApiHeader
           harvest={null}
           publisher={null}
+          publisherItems={null}
           title={null}
         />
       </div>

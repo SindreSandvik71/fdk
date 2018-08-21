@@ -66,17 +66,7 @@ exports[`should render ApiHeader correctly 1`] = `
   </div>
   <div
     className="mb-4"
-  >
-    <span>
-      Provider
-       
-      <strong
-        className="fdk-strong-virksomhet"
-      >
-        Brønnøysundregistrene
-      </strong>
-    </span>
-  </div>
+  />
 </header>
 `;
 

@@ -8,6 +8,7 @@ import localization from '../../../../lib/localization';
 import { DatasetLabelNational } from '../../../../components/dataset-label-national/dataset-label-national.component';
 import './search-hit-item.scss';
 import { getTranslateText } from '../../../../lib/translateText';
+import { getPublisherByOrgNr } from '../../../../redux/modules/publishers';
 
 const renderHeaderLink = item => {
   if (!item) {
@@ -48,29 +49,29 @@ const renderDescription = description => {
   );
 };
 
-const renderPublisher = publisher => {
-  if (publisher && publisher.name) {
+const renderPublisher = (publisher, publishers) => {
+  if (!publisher) {
+    return null;
+  }
+  const publisherItem = getPublisherByOrgNr(publishers, _.get(publisher, 'id'));
+
+  const publisherPrefLabel =
+    getTranslateText(_.get(publisherItem, ['prefLabel'])) ||
+    _.capitalize(_.get(publisherItem, 'name', ''));
+
+  if (publisherPrefLabel) {
     return (
       <div className="mb-4">
         <span>
           <span className="uu-invisible" aria-hidden="false">
-            Datasettet
+            API
           </span>
-          {localization.search_hit.owned}&nbsp;
-          <span className="fdk-strong-virksomhet">
-            <span className="uu-invisible" aria-hidden="false">
-              Utgiver.
-            </span>
-            {publisher && publisher.name
-              ? publisher.name.charAt(0) +
-                publisher.name.substring(1).toLowerCase()
-              : ''}
-          </span>
+          {localization.api.provider}&nbsp;
+          <span className="fdk-strong-virksomhet">{publisherPrefLabel}</span>
         </span>
       </div>
     );
   }
-  return null;
 };
 
 const renderExpiredVersion = expired => {
@@ -112,7 +113,7 @@ const renderFormat = formats => {
 };
 
 export const SearchHitItem = props => {
-  const { item, fadeInCounter } = props;
+  const { item, fadeInCounter, publishers } = props;
 
   const searchHitClass = cx('search-hit', {
     'fade-in-200': fadeInCounter === 0,
@@ -128,7 +129,7 @@ export const SearchHitItem = props => {
 
       {renderHeaderLink(item)}
 
-      {renderPublisher(_.get(item, 'publisher'))}
+      {renderPublisher(_.get(item, 'publisher'), publishers)}
 
       {renderExpiredVersion(_.get(item, 'expired'))}
 
@@ -143,10 +144,12 @@ export const SearchHitItem = props => {
 
 SearchHitItem.defaultProps = {
   fadeInCounter: null,
-  item: null
+  item: null,
+  publishers: null
 };
 
 SearchHitItem.propTypes = {
   fadeInCounter: PropTypes.number,
-  item: PropTypes.shape({})
+  item: PropTypes.shape({}),
+  publishers: PropTypes.object
 };

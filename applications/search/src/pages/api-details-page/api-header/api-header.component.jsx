@@ -2,28 +2,42 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
 import Moment from 'react-moment';
+import _ from 'lodash';
 
 import localization from '../../../lib/localization';
 import { DatasetLabelNational } from '../../../components/dataset-label-national/dataset-label-national.component';
+import { getPublisherByOrgNr } from '../../../redux/modules/publishers';
+import { getTranslateText } from '../../../lib/translateText';
 
 export const ApiHeader = props => {
-  const { title, publisher, harvest } = props;
+  const { title, publisher, harvest, publisherItems } = props;
 
   const renderPublisher = () => {
-    if (publisher && publisher.name) {
+    if (!publisher) {
+      return null;
+    }
+    const publisherItem = getPublisherByOrgNr(
+      publisherItems,
+      _.get(publisher, 'id')
+    );
+
+    const publisherPrefLabel =
+      getTranslateText(_.get(publisherItem, ['prefLabel'])) ||
+      _.capitalize(_.get(publisherItem, 'name', ''));
+
+    if (publisherPrefLabel) {
       return (
-        <span>
-          {localization.api.provider}&nbsp;
-          <strong className="fdk-strong-virksomhet">
-            {publisher
-              ? publisher.name.charAt(0) +
-                publisher.name.substring(1).toLowerCase()
-              : ''}
-          </strong>
-        </span>
+        <div className="mb-4">
+          <span>
+            <span className="uu-invisible" aria-hidden="false">
+              API
+            </span>
+            {localization.api.provider}&nbsp;
+            <span className="fdk-strong-virksomhet">{publisherPrefLabel}</span>
+          </span>
+        </div>
       );
     }
-    return null;
   };
 
   const renderHarvested = () => {

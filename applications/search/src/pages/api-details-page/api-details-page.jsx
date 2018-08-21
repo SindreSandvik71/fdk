@@ -17,6 +17,7 @@ const renderDescription = description => {
   if (!description) {
     return null;
   }
+
   const descriptionText = getTranslateText(description);
   return (
     <ShowMore
@@ -96,10 +97,14 @@ const renderStickyMenu = apiItem => {
 };
 
 export const ApiDetailsPage = props => {
-  const { apiItem } = props;
+  props.fetchPublishersIfNeeded();
+
+  const { apiItem, publisherItems } = props;
+
   if (!apiItem) {
     return null;
   }
+
   return (
     <main id="content" className="container">
       <article>
@@ -109,6 +114,7 @@ export const ApiDetailsPage = props => {
               title={getTranslateText(apiItem.title)}
               publisher={apiItem.publisher}
               harvest={apiItem.harvest}
+              publisherItems={publisherItems}
             />
           </div>
         </div>
@@ -132,9 +138,13 @@ export const ApiDetailsPage = props => {
 };
 
 ApiDetailsPage.defaultProps = {
-  apiItem: null
+  apiItem: null,
+  publisherItems: null,
+  fetchPublishersIfNeeded: () => {}
 };
 
 ApiDetailsPage.propTypes = {
-  apiItem: PropTypes.object
+  apiItem: PropTypes.object,
+  publisherItems: PropTypes.object,
+  fetchPublishersIfNeeded: PropTypes.func
 };

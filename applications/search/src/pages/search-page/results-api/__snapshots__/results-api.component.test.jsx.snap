@@ -278,6 +278,7 @@ exports[`should render ResultsApi correctly with hits 1`] = `
           }
         }
         key="jar:file:/app.jar!/BOOT-INF/classes!/datakatalog-api.json"
+        publishers={Object {}}
       />
       <div
         className="col-12 d-flex justify-content-center"

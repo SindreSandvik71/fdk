@@ -1,15 +1,22 @@
 import { connect } from 'react-redux';
+import { fetchPublishersIfNeededAction } from '../../redux/modules/publishers';
+import { ResolvedApiDetailsPage } from './resolved-api-details-page';
 
-import { ApiDetailsPage } from './api-details-page';
-import { fakeApiItem } from './fixtures/fake-api-item';
+const mapStateToProps = ({ publishers }) => {
+  const { publisherItems } = publishers || {
+    publisherItems: null
+  };
 
-const mapStateToProps = ({}) => ({
-  apiItem: fakeApiItem
+  return {
+    publisherItems
+  };
+};
+
+const mapDispatchToProps = dispatch => ({
+  fetchPublishersIfNeeded: () => dispatch(fetchPublishersIfNeededAction())
 });
-
-const mapDispatchToProps = dispatch => ({});
 
 export const ConnectedApiDetailsPage = connect(
   mapStateToProps,
   mapDispatchToProps
-)(ApiDetailsPage);
+)(ResolvedApiDetailsPage);

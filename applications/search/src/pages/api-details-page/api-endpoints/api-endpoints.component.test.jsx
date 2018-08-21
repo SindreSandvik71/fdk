@@ -13,7 +13,7 @@ test('should render api-ApiEndpoints correctly with no props', () => {
 test('should render api-ApiEndpoints correctly', () => {
   defaultProps = {
     name: 'Test',
-    paths: paths
+    paths
   };
   const wrapper = shallow(<ApiEndpoints {...defaultProps} />);
   expect(wrapper).toMatchSnapshot();

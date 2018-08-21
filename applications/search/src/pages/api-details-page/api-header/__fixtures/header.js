@@ -1,13 +1,13 @@
 export default {
-  "title": "Test",
-  "publisher": {
-    "name": 'Brønnøysundregistrene'
+  title: 'Test',
+  publisher: {
+    name: 'Brønnøysundregistrene'
   },
-  "harvest": {
-    "firstHarvested": '2018-06-25T19":51:05+0200',
-    "lastHarvested": '2018-07-09T14:40:37+0200',
-    "lastChanged": '2018-07-09T14:40:37+0200',
-    "changed": [
+  harvest: {
+    firstHarvested: '2018-06-25T19":51:05+0200',
+    lastHarvested: '2018-07-09T14:40:37+0200',
+    lastChanged: '2018-07-09T14:40:37+0200',
+    changed: [
       '2018-06-25T19:51:05+0200',
       '2018-06-25T19:51:12+0200',
       '2018-06-26T09:16:46+0200',
@@ -18,4 +18,4 @@ export default {
       '2018-07-09T14:40:37+0200'
     ]
   }
-}
+};

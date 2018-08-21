@@ -472,6 +472,7 @@ export class SearchPage extends React.Component {
                   apiItems={this.props.apiItems}
                   searchQuery={this.state.searchQuery}
                   onSort={this.handleDatasetSort}
+                  publishers={publisherItems}
                   {...props}
                 />
               )}

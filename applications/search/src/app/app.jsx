@@ -6,6 +6,7 @@ import localization from '../lib/localization';
 import { ConnectedSearchPage } from '../pages/search-page/connected-search-page';
 import { ConnectedDatasetDetailsPage } from '../pages/dataset-details-page/connected-dataset-details-page';
 import { ResolvedApiDetailsPage } from '../pages/api-details-page/resolved-api-details-page';
+import { ConnectedApiDetailsPage } from '../pages/api-details-page/connected-api-details-page';
 import { AboutPage } from '../pages/about-page/about-page.component';
 import { ArticlePage } from '../pages/article-page/article-page.component';
 import { Breadcrumbs } from './breadcrumbs/breadcrumbs.component';
@@ -55,7 +56,7 @@ export function App(props) {
             path="/datasets/:id"
             component={ConnectedDatasetDetailsPage}
           />
-          <Route exact path="/apis/:id" component={ResolvedApiDetailsPage} />
+          <Route exact path="/apis/:id" component={ConnectedApiDetailsPage} />
           <Route
             exact
             path="/reports"

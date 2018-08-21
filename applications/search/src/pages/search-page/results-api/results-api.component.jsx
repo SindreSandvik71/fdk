@@ -83,13 +83,14 @@ export class ResultsApi extends React.Component {
   }
 
   _renderHits() {
-    const { apiItems } = this.props;
+    const { apiItems, publishers } = this.props;
     if (apiItems && apiItems.hits) {
       return apiItems.hits.map((item, index) => (
         <SearchHitItem
           key={item.uri}
           item={item}
           fadeInCounter={index < 3 ? index : null}
+          publishers={publishers}
         />
       ));
     }
@@ -259,10 +260,10 @@ ResultsApi.defaultProps = {
   // onFilterPublisherHierarchy: null,
   // onFilterProvenance: null,
   // onFilterSpatial: null,
-  searchQuery: {}
+  searchQuery: {},
   // themesItems: null,
   // publisherArray: null,
-  // publishers: null,
+  publishers: null
   // distributionTypeItems: null,
   // onClearSearch: null,
   // onPageChange: null,
@@ -283,7 +284,7 @@ ResultsApi.propTypes = {
   searchQuery: PropTypes.object,
   // themesItems: PropTypes.object,
   // publisherArray: PropTypes.array,
-  // publishers: PropTypes.object,
+  publishers: PropTypes.object,
   // distributionTypeItems: PropTypes.array,
   // onClearSearch: PropTypes.func,
   onSort: PropTypes.func.isRequired

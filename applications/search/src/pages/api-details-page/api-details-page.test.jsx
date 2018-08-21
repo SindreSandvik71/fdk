@@ -12,11 +12,15 @@ test('should render ApiDetailsPage correctly with no apiItem', () => {
 });
 
 test('should render ApiDetailsPage correctly with apiItem', () => {
-  const wrapper = shallow(<ApiDetailsPage apiItem={apiItemComplete} isFetchingDataset={false} />);
+  const wrapper = shallow(
+    <ApiDetailsPage apiItem={apiItemComplete} isFetchingDataset={false} />
+  );
   expect(wrapper).toMatchSnapshot();
 });
 
 test('should render ApiDetailsPage correctly with missing api-properties', () => {
-  const wrapper = shallow(<ApiDetailsPage apiItem={apiItemMissingFields} isFetchingDataset={false} />);
+  const wrapper = shallow(
+    <ApiDetailsPage apiItem={apiItemMissingFields} isFetchingDataset={false} />
+  );
   expect(wrapper).toMatchSnapshot();
 });
