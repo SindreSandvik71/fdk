@@ -1,9 +1,12 @@
 {
+  "api": "API",
   "description": "Description",
   "showFullDescription": "Show the full description",
   "showLess": "Show less",
   "objective": "Objective",
   "showFullObjective": "Show the full objective",
+  "format": "Format",
+  "contactInfo": "Contact information",
   "app": {
     "title": "The National Data Directory",
     "titleSub": "Datasets from publishers in Norway.",
@@ -265,5 +268,15 @@
   },
   "registration": {
     "title": "Registration (only in Norwegian)"
+  },
+  "api": {
+    "accessRight": {
+      "public": "API is public"
+    },
+    "endpoints": {
+      "response": "Response",
+      "description": "Description"
+    },
+    "provider": "Provider"
   }
 }
